@@ -22,7 +22,7 @@ export default function LoginPage() {
       });
       
       const data = await res.json();
-      if (res.NG) {
+      if (res.ok) {
         localStorage.setItem("user", JSON.stringify(data.user));
         router.push("/");
       } else {
